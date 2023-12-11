@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 800px;
+    width: 1280px;
+    background-color: #060034;
+} 
+.main_container{
+    position: relative;
+    background: linear-gradient(#080424, #3c4688) repeat-y;
+}
+.layers{
+    position: relative;
+    display: flex;
+    height: 800px;
+    width: 1280px;
+    top: 40px;
+    justify-content: center;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.layer{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100%;
+    background-size: cover;
+}
+/* Paralax Scroll Effect */
+.layer_star{
+    transform: translateX(calc(var(--scrollTop)/4))
+}
+.layer_moon {
+    transform: translate3d(0, calc(var(--scrollTop)/6), 0)
+}
+.layer_back {
+    transform: translate3d(0, calc(var(--scrollTop) / 6), 0)
+}
+.layer_header{
+    transform: translate3d(0, var(--scrollTop), 0)
+}
+#logo{
+    width: 480px;
+    top: 50px;
+}
+.layer_middle {
+    transform: translate3d(0, calc(var(--scrollTop) / 8), 0)
+}
+.layer_front{
+    transform: scale(4, 1.3);
+    z-index: 100;
+}
+.layer_back_2 {
+    transform: translateX(calc(var(--scrollTop)*(-1)/30))
+}
+.layer_front_2{
+    transform: scale(1, 1.13);
+    z-index: 100;
+}
