@@ -60,3 +60,34 @@ body{
     transform: scale(1, 1.13);
     z-index: 100;
 }
+/* Chameleon Change color */
+#container{
+    position: relative;
+    display: flex;
+    height: 500px;
+    width: 500px;
+    top: 20px;
+    justify-content: center;
+    text-align: center;
+}
+#color-picker {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px;
+}
+#background_chameleon {
+    border-radius: 50%;
+    background-color: #00843b;
+    transition: background-color 1.8s ease-out;
+}
+#chameleon{
+    position: relative;
+    display: flex;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+}
