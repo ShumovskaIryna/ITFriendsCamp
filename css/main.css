@@ -91,3 +91,22 @@ body{
     justify-content: center;
     text-align: center;
 }
+/* Panda Box */
+#panda{
+    position: relative;
+    display: flex;
+    height: 460px;
+    width: 460px;
+}
+#box{
+    position: absolute;
+    top: 30px;
+    display: flex;
+    height: 500px;
+    width: 500px;
+    visibility: visible;
+}
+button{
+    width: 150px;
+    margin-bottom: 15px;
+}
