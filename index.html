@@ -5,6 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Font Awesome cdn css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>ITFriendsCamp</title>
     <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -25,10 +33,28 @@
     <article class="main_container">
         <div class="layers">
             <div class="layer layer_star" style="background-image: url(./img/stars.png)"></div>
-            <div class="layer layer_moon" style="background-image: url(./img/moon.png)"></div>
+            <!-- <div class="layer layer_moon" style="background-image: url(./img/moon.png)"></div> -->
             <div class="layer layer_back_2" style="background-image: url(./img/landscape_behind.png)"></div>
             <div class="layer layer_middle_2" style="background-image: url(./img/trees_camp.png)"></div>
             <div class="layer layer_front_2" style="background-image: url(./img/bottom_1.png)"></div>
+            <div class="container">
+                <form action="">
+                    <input type="text" class="todo-input">
+                    <button class="todo-button" type="submit">
+                        <i class="fas fa-plus-circle fa-lg"></i>
+                    </button>
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="incomplete">Incomplete</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="todo-container">
+                    <ul class="todo-list"></ul>
+                </div>
+            </div>
         </div>
     </article>
     <article class="main_container">
@@ -41,7 +67,7 @@
             </div>
             <div id="container">
                 <div id="panda_box">
-                    <button onclick="changeVisibility()">Show / Hide</button>
+                    <button class="show" onclick="startFadeOut()">Show / Hide</button>
                     <img src="./img/panda.png" id="panda" alt="Panda" />
                     <img src="./img/box.png" id="box" alt="Box" />
                 </div>
