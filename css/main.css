@@ -293,16 +293,51 @@ body{
     height: 120px;
     width: 120px;
     background-color: rgb(255, 200, 0);
-    box-shadow: 0 0 30px gold;
+    box-shadow: 0 0 70px gold;
     border-radius: 50%;
   }
   .axis1{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-right: 2px solid #fff;
+    border-radius: 50%;
+    animation: anime-1 140s linear infinite;
+  }
+.axis1 .mercury{
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background-color: rgb(230, 144, 46);
+    border-radius: 50%;
+    left: 100px;
+    top: 190px;
+}
+.axis2{
+  position: absolute;
+  height: 260px;
+  width: 260px;
+  border-right: 2px solid #fff;
+  border-radius: 50%;
+  animation: anime-1 583s linear infinite;
+}
+.axis2 .venus{
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  background-color: rgb(255, 217, 0);
+  border-radius: 50%;
+  left: 110px;
+  top: 240px;
+}
+
+  .axis3{
     position: absolute;
     height: 400px;
     width: 400px;
     border-right: 2px solid #fff;
     border-radius: 50%;
-    animation: anime-1 4.8s linear infinite;
+    animation: anime-1 2.356s linear infinite;
   }
   @keyframes anime-1{
   0%{
@@ -312,50 +347,67 @@ body{
     transform: rotate(360deg);
   }
 }
-.axis1 .earth{
+.axis3 .earth{
     position: absolute;
     height: 50px;
     width: 50px;
     background-color: rgb(0, 191, 255);
     border-radius: 50%;
     left: 180px;
-    top: 370px;
+    top: 380px;
 }
-.axis2{
+.axis_moon{
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
     border-right: 1px solid #fff;
     border-radius: 50%;
-    left: 160px;
-    top: 350px;
-    animation: anime-1 5s linear infinite;
+    left: 170px;
+    top: 365px;
+    animation: anime-1 7s linear infinite;
   }
-  .axis2 .moon{
+  .axis_moon .moon{
     position: absolute;
-    height: 18px;
-    width: 18px;
+    height: 14px;
+    width: 14px;
     background-color: rgb(146, 162, 167);
     border-radius: 50%;
     left: 40px;
-    top: 90px;
+    top: 67px;
 }
-.axis3{
+.axis4{
     position: absolute;
-    height: 600px;
-    width: 600px;
+    height: 560px;
+    width: 560px;
     border-right: 2px solid #fff;
     border-radius: 50%;
-    animation: anime-1 4.92s linear infinite;
+    animation: anime-1 2.436s linear infinite;
   }
-  .axis3 .mars{
+  .axis4 .mars{
     position: absolute;
     height: 28px;
     width: 28px;
-    background-color: rgb(228, 110, 0);
+    background-color: rgb(255, 106, 0);
     border-radius: 50%;
-    left: 300px;
-    top: 585px;
+    left: 280px;
+    top: 545px;
+}
+.axis5{
+  position: absolute;
+  height: 700px;
+  width: 700px;
+  border-right: 2px solid #fff;
+  border-radius: 50%;
+  animation: anime-1 2s linear infinite;
+}
+.axis5 .jupiter{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(179, 137, 98, 0.829);
+  border-radius: 50%;
+  left: 280px;
+  top: 650px;
 }
 
 /* sleep */
