@@ -135,8 +135,6 @@ function removeLocalTodos(todo) {
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
-const emodji = ["🦋","🦋","🐢","🐢","🦒","🦒","🐼","🐼","🐶","🐶","🦊","🦊","🐸","🐸","🐌","🐌"]
-
 // Chameleon
 const colorPicker = document.getElementById("color-picker");
 const chameleon = document.getElementById("chameleon");
