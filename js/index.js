@@ -1,3 +1,24 @@
+
+// Chameleon
+const colorPicker = document.getElementById("color-picker");
+// const chameleon = document.getElementById("chameleon");
+
+const chameleonBody = document.getElementById("background_chameleon");
+colorPicker.addEventListener("change", function () {
+  const chosenColor = this.value;
+  chameleonBody.style.backgroundColor = chosenColor;
+});
+
+// Panda box
+  function startFadeOut() {
+    var box = document.getElementById("box");
+    if (box.style.opacity === "0") {
+      box.style.opacity = "1";
+    } else {
+      box.style.opacity = "0";
+    }
+    box.classList.add("fade-out");
+  }
 // Paralax Scroll effect
 window.addEventListener('scroll', e => {
     document.body.style.cssText = `--scrollTop: ${this.scrollY}px`
@@ -22,7 +43,6 @@ function addTodo(event) {
   newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
-  //ADDING TO LOCAL STORAGE
   saveLocalTodos(todoInput.value);
 
   const completedButton = document.createElement("button");
@@ -58,30 +78,30 @@ function deleteCheck(e) {
   }
 }
 
-function filterTodo(e) {
-  const todos = todoList.childNodes;
-  todos.forEach(function (todo) {
-    switch (e.target.value) {
-      case "all":
-        todo.style.display = "flex";
-        break;
-      case "completed":
-        if (todo.classList.contains("completed")) {
-          todo.style.display = "flex";
-        } else {
-          todo.style.display = "none";
-        }
-        break;
-      case "incomplete":
-        if (!todo.classList.contains("completed")) {
-          todo.style.display = "flex";
-        } else {
-          todo.style.display = "none";
-        }
-        break;
-    }
-  });
-}
+// function filterTodo(e) {
+//   const todos = todoList.childNodes;
+//   todos.forEach(function (todo) {
+//     switch (e.target.value) {
+//       case "all":
+//         todo.style.display = "flex";
+//         break;
+//       case "completed":
+//         if (todo.classList.contains("completed")) {
+//           todo.style.display = "flex";
+//         } else {
+//           todo.style.display = "none";
+//         }
+//         break;
+//       case "incomplete":
+//         if (!todo.classList.contains("completed")) {
+//           todo.style.display = "flex";
+//         } else {
+//           todo.style.display = "none";
+//         }
+//         break;
+//     }
+//   });
+// }
 
 function saveLocalTodos(todo) {
   let todos;
@@ -135,23 +155,3 @@ function removeLocalTodos(todo) {
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
-// Chameleon
-const colorPicker = document.getElementById("color-picker");
-const chameleon = document.getElementById("chameleon");
-
-const chameleonBody = document.getElementById("background_chameleon");
-colorPicker.addEventListener("change", function () {
-  const chosenColor = this.value;
-  chameleonBody.style.backgroundColor = chosenColor;
-});
-
-// Panda box
-  function startFadeOut() {
-    var box = document.getElementById("box");
-    if (box.style.opacity === "0") {
-      box.style.opacity = "1";
-    } else {
-      box.style.opacity = "0";
-    }
-    box.classList.add("fade-out");
-  }
