@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    height: 110vh;
+    height: 140vh;
     width: 100vw;
     background-color: #060034;
 } 
@@ -304,7 +304,8 @@ article{
     position: absolute;
     height: 14px;
     width: 14px;
-    background-color: rgb(230, 144, 46);
+    /* background-color: rgb(230, 144, 46); */
+    background-image: url(./img/mountains_front.png);
     border-radius: 50%;
     left: 100px;
     top: 190px;
